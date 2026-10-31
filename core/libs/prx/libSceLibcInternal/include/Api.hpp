@@ -5,6 +5,7 @@
 #include "prx/libkernel/System/include/UserContext.hpp"
 #include "prx/libc/include/FileStream.hpp"
 #include "SceTypes.hpp"
+#include "prx/libSceLibcInternal/include/FutureError.hpp"
 
 using ErrExit = void (APS5_VABI*)(int);
 
