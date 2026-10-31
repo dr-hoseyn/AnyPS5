@@ -37,8 +37,7 @@ void Check(const char* message, bool deleting) {
         Require(object->base.message == nullptr);
         Require(object->tail[0] == 0x12345678 && object->tail[1] == 0xabcdef);
     }
-    if (message) Require(observer.message && std::strcmp(observer.message, message) == 0);
-    else Require(observer.message == nullptr);
+    Require(observer.message && std::strcmp(observer.message, message ? message : "") == 0);
     _ZNSt11logic_errorD2Ev_nid_postfix(&observer);
     Require(observer.message == nullptr);
 }
